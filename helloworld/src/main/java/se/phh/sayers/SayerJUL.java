@@ -1,7 +1,7 @@
 package se.phh.sayers;
 
 import se.phh.Message;
-import java.util.logging.*;
+import java.util.logging.Logger;
 
 public class SayerJUL implements Sayer{
 	private static Logger logger = Logger.getLogger(SayerJUL.class.getName());
