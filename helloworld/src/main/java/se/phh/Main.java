@@ -1,6 +1,7 @@
 package se.phh;
 
 import se.phh.sayers.Sayer;
+import se.phh.sayers.SayerJUL;
 import se.phh.sayers.SayerSystemErr;
 import se.phh.sayers.SayerSystemOut;
 
@@ -17,6 +18,8 @@ public class Main {
         sayer = new SayerSystemErr();
         sayer.say(message);
         sayer.say(loudMessage);
+        sayer.say(quiteMessage);
+        sayer = new SayerJUL();
         sayer.say(quiteMessage);
     }
     
