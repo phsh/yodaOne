@@ -12,9 +12,4 @@ public class HelloWorld {
         System.err.println(theMessage);
     }
     
-    public static void main(String[] args) {
-        HelloWorld hello = new HelloWorld("Hello world!");
-        hello.sayHello();
-    }
-    
 }
