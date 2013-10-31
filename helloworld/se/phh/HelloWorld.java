@@ -1,6 +1,6 @@
 package se.phh;
 
-public class HelloWorld {
+public class HelloWorld implements Say {
     
     private String theMessage;
     
@@ -8,8 +8,8 @@ public class HelloWorld {
         theMessage = message;
     }
     
-    public void sayHello() {
-        System.err.println(theMessage);
+    public String say() {
+        return theMessage;
     }
     
 }
