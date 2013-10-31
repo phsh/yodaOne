@@ -7,10 +7,12 @@ import se.phh.sayers.SayerSystemOut;
 
 public class Main {
 
-    public static void main(String[] args) {
-        Message message = new Message("Hello world!");
-        LoudMessage loudMessage = new LoudMessage("Hello world!");
-        QuiteMessage quiteMessage = new QuiteMessage("Hello world!");
+    private static final String MESSAGE = "Hello world!";
+
+	public static void main(String[] args) {
+        Message message = new Message(MESSAGE);
+        LoudMessage loudMessage = new LoudMessage(MESSAGE);
+        QuiteMessage quiteMessage = new QuiteMessage(MESSAGE);
         Sayer sayer = new SayerSystemOut();
         sayer.say(message);
         sayer.say(loudMessage);
