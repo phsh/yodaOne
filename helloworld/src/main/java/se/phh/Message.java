@@ -1,6 +1,6 @@
 package se.phh;
 
-public class Message implements Say {
+public class Message {
     
     private String theMessage;
     
@@ -8,7 +8,7 @@ public class Message implements Say {
         theMessage = message;
     }
     
-    public String say() {
+    public String getMessage() {
         return theMessage;
     }
     

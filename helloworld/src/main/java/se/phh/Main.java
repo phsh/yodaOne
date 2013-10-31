@@ -1,10 +1,14 @@
 package se.phh;
 
+import se.phh.sayers.Sayer;
+import se.phh.sayers.SayerSystemOut;
+
 public class Main {
 
     public static void main(String[] args) {
-        Say hello = new Message("Hello world!");
-        System.out.println(hello.say());
+        Message hello = new Message("Hello world!");
+        Sayer sayer = new SayerSystemOut();
+        sayer.say(hello);
     }
     
 }
