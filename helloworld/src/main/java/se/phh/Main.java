@@ -6,11 +6,15 @@ import se.phh.sayers.Sayer;
 import se.phh.sayers.SayerJUL;
 import se.phh.sayers.SayerSystemErr;
 import se.phh.sayers.SayerSystemOut;
-
+import javax.annotation.*;
 public class Main {
 	private static Logger logger = Logger.getLogger(Main.class.getName());
     private static final String MESSAGE = "Hello world!";
 
+    public void startOfMain(){
+    	logger.info("start");
+    }
+    
 	public static void main(String[] args) {
 		logger.info("start of main");
         Message message = new Message(MESSAGE);
