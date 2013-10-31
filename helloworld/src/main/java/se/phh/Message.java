@@ -1,11 +1,9 @@
 package se.phh;
 
-import javax.annotation.PostConstruct;
 public class Message {
     
     private String theMessage;
     
-    @PostConstruct
     public void startUp(){
     	System.out.print("startUp ");
     }
