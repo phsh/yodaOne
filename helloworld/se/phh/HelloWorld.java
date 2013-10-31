@@ -2,7 +2,6 @@ package se.phh;
 
 public class HelloWorld {
     
-    
     private String theMessage;
     
     public HelloWorld(String message) {
