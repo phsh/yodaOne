@@ -1,13 +1,14 @@
 package se.phh.message;
 
-public class LoudMessage extends Message {
-
+public class LoudMessage implements MessageContent {
+	private Message theMessage;
+	
 	public LoudMessage(String message) {
-		super(message);
+		theMessage = new Message("[LOUD] "+ message);
 	}
 	
-	public String getMessage(){
-		return "[LOUD] " + super.getMessage();
+	public String getMessage() {
+		return theMessage.getMessage();
 	}
-
+	
 }
