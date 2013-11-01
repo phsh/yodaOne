@@ -1,7 +1,7 @@
 package se.phh.sayers;
-import se.phh.message.Message;
+import se.phh.message.MessageContent;
 public interface Sayer{
  
-    void say(Message message);
+    void say(MessageContent mc);
 
 }

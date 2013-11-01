@@ -3,7 +3,7 @@ package se.phh;
 import java.util.ArrayList;
 import java.util.List;
 
-import se.phh.message.Message;
+import se.phh.message.MessageContent;
 import se.phh.message.MessageFactory;
 
 public class WhatToSayGenerator {
@@ -19,8 +19,8 @@ public class WhatToSayGenerator {
 		return instance;
 	}
 
-	public List<Message> getWhatToSay() {
-		List<Message> whatToSay = new ArrayList<Message>();
+	public List<MessageContent> getWhatToSay() {
+		List<MessageContent> whatToSay = new ArrayList<MessageContent>();
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
 				MessageFactory.MESSAGE, MESSAGE));
 		whatToSay.add(MessageFactory.getInstance().getMessageType(

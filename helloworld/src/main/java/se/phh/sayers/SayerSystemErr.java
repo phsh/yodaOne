@@ -1,10 +1,10 @@
 package se.phh.sayers;
 
-import se.phh.message.Message;
+import se.phh.message.MessageContent;
 
 public class SayerSystemErr implements Sayer {
 
-	public void say(Message message) {
+	public void say(MessageContent message) {
 		System.err.println(message.getMessage());
 	}
 

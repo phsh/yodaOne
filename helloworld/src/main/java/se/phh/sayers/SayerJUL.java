@@ -1,13 +1,13 @@
 package se.phh.sayers;
 
-import se.phh.message.Message;
+import se.phh.message.MessageContent;
 
 import java.util.logging.Logger;
 
 public class SayerJUL implements Sayer{
 	private static Logger logger = Logger.getLogger(SayerJUL.class.getName());
 
-	public void say(Message message) {
+	public void say(MessageContent message) {
 		logger.fine(message.getMessage());
 		logger.finer(message.getMessage());
 		logger.finest(message.getMessage());

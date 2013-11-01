@@ -13,12 +13,12 @@ public class MessageFactory {
 		return instance;
 	}
 	
-	public Message getMessageType(String messageValue){
+	public MessageContent getMessageType(String messageValue){
 		return getMessageType(MESSAGE_DEFAULT,messageValue);
 	}
 	
-	public Message getMessageType(String messageType, String messageValue){
-		Message returner = null;
+	public MessageContent getMessageType(String messageType, String messageValue){
+		MessageContent returner = null;
 		if(messageType.equals(MESSAGE)){
 			returner  = new Message(messageValue);
 		} else if(messageType.equals(MESSAGE_QUITE)){

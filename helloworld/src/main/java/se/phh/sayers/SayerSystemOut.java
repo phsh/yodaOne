@@ -1,13 +1,13 @@
 package se.phh.sayers;
 
-import se.phh.message.Message;
+import se.phh.message.MessageContent;
 
 
 public class SayerSystemOut implements Sayer {
 	
 	public SayerSystemOut(){}
 	
-	public void say(Message m) {
+	public void say(MessageContent m) {
 		System.out.println(m.getMessage());
 	}
 
