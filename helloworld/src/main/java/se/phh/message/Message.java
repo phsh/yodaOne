@@ -1,4 +1,4 @@
-package se.phh;
+package se.phh.message;
 
 public class Message {
     

@@ -2,11 +2,11 @@ package se.phh;
 
 import java.util.logging.Logger;
 
+import se.phh.message.LoudMessage;
+import se.phh.message.Message;
+import se.phh.message.QuiteMessage;
 import se.phh.sayers.Sayer;
 import se.phh.sayers.SayerFactory;
-import se.phh.sayers.SayerJUL;
-import se.phh.sayers.SayerSystemErr;
-import se.phh.sayers.SayerSystemOut;
 
 public class Main {
 	private static Logger logger = Logger.getLogger(Main.class.getName());

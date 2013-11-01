@@ -1,6 +1,8 @@
 package se.phh;
 
 import org.junit.Test;
+
+import se.phh.message.Message;
 import static org.junit.Assert.assertEquals;
 public class TestMessage{
 	
