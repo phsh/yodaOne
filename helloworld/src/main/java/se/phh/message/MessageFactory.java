@@ -5,24 +5,29 @@ public class MessageFactory {
 	public static final String MESSAGE = "MESSAGE";
 	public static final String MESSAGE_QUITE = "MESSAGE_QUITE";
 	public static final String MESSAGE_LOUD = "MESSAGE_LOUD";
+	public static final String MESSAGE_DEFAULT = "DEFAULT";
 	private MessageFactory(){}
 	
 	public static MessageFactory getInstance(){
 		if(instance== null) instance = new MessageFactory();
 		return instance;
 	}
+	public Message getMessageType(String messageValue){
+		return getMessageType(MESSAGE_DEFAULT,messageValue);
+	}
 	
 	public Message getMessageType(String messageType, String messageValue){
 		Message returner = null;
 		if(messageType.equals(MESSAGE)){
 			returner  = new Message(messageValue);
-		}
-		if(messageType.equals(MESSAGE_QUITE)){
+		} else if(messageType.equals(MESSAGE_QUITE)){
 			returner  = new QuiteMessage(messageValue);
-		}
-		if(messageType.equals(MESSAGE_LOUD)){
+		} else if(messageType.equals(MESSAGE_LOUD)){
 			returner  = new LoudMessage(messageValue);
+		} else {
+			returner = new Message("["+messageType+"]"+messageValue);
 		}
+		
 		return returner;
 	}
 }
