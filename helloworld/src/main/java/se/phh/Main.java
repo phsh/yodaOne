@@ -2,9 +2,8 @@ package se.phh;
 
 import java.util.logging.Logger;
 
-import se.phh.message.LoudMessage;
 import se.phh.message.Message;
-import se.phh.message.QuiteMessage;
+import se.phh.message.MessageFactory;
 import se.phh.sayers.Sayer;
 import se.phh.sayers.SayerFactory;
 
@@ -14,9 +13,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		logger.info("start of main");
-        Message message = new Message(MESSAGE);
-        LoudMessage loudMessage = new LoudMessage(MESSAGE);
-        QuiteMessage quiteMessage = new QuiteMessage(MESSAGE);
+		Message message = MessageFactory.getInstance().getMessageType(MessageFactory.MESSAGE, MESSAGE);
+        Message loudMessage = MessageFactory.getInstance().getMessageType(MessageFactory.MESSAGE_LOUD, MESSAGE);
+        Message quiteMessage = MessageFactory.getInstance().getMessageType(MessageFactory.MESSAGE_QUITE, MESSAGE);
         Sayer sayer = SayerFactory.getInstance().getSayer(SayerFactory.SAYER_OUT);
         sayer.say(message);
         sayer.say(loudMessage);
