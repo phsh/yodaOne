@@ -4,10 +4,6 @@ public class Message implements MessageContent{
     
     private String theMessage;
     
-    public void startUp(){
-    	System.out.print("startUp ");
-    }
-    
     public Message(String message) {
         theMessage = message;
     }
