@@ -15,6 +15,10 @@ public class SayerFactory {
 		return instance;
 	}
 	
+	public Sayer getSayer(){
+		return getSayer(SayerFactory.SAYER_DEFAILT);
+	}
+	
 	public Sayer getSayer(String typeOfSayer){
 		Sayer returner = null;
 		if(typeOfSayer.equals(SAYER_OUT)){
@@ -25,7 +29,7 @@ public class SayerFactory {
 			returner = new SayerJUL();
 		}
 		if(returner == null){
-			returner = new SayerSystemOut();
+			returner = getSayer(SAYER_OUT);
 		}
 		return returner;
 	}

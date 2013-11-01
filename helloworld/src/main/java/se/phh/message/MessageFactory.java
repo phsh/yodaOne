@@ -25,7 +25,7 @@ public class MessageFactory {
 		} else if(messageType.equals(MESSAGE_LOUD)){
 			returner  = new LoudMessage(messageValue);
 		} else {
-			returner = new Message("["+messageType+"]"+messageValue);
+			returner = getMessageType(MessageFactory.MESSAGE, "[" + messageType + "] "+messageValue);
 		}
 		
 		return returner;
