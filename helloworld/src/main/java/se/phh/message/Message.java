@@ -1,6 +1,6 @@
 package se.phh.message;
 
-public class Message {
+public class Message implements MessageContent{
     
     private String theMessage;
     
