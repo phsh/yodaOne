@@ -5,6 +5,7 @@ public class SayerFactory {
 	public  static final String SAYER_OUT="SAYER_OUT";
 	public static final String SAYER_ERR="SAYER_ERR";
 	public  static final String SAYER_JUL= "SAYER_JUL";
+	public static final String SAYER_DEFAILT="DEFAULT";
 	private SayerFactory(){
 		
 	}
@@ -18,12 +19,13 @@ public class SayerFactory {
 		Sayer returner = null;
 		if(typeOfSayer.equals(SAYER_OUT)){
 			returner = new SayerSystemOut();
-		}
-		if(typeOfSayer.equals(SAYER_ERR)){
+		} else if(typeOfSayer.equals(SAYER_ERR)){
 			returner = new SayerSystemErr();
-		}
-		if(typeOfSayer.equals(SAYER_JUL)){
+		} else if(typeOfSayer.equals(SAYER_JUL)){
 			returner = new SayerJUL();
+		}
+		if(returner == null){
+			returner = new SayerSystemOut();
 		}
 		return returner;
 	}

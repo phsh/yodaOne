@@ -10,7 +10,6 @@ import se.phh.sayers.SayerFactory;
 public class Main {
 	private static Logger logger = Logger.getLogger(Main.class.getName());
     private static final String MESSAGE = "Hello world!";
-
 	public static void main(String[] args) {
 		logger.info("start of main");
 		Message message = MessageFactory.getInstance().getMessageType(MessageFactory.MESSAGE, MESSAGE);
