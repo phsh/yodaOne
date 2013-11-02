@@ -2,7 +2,8 @@ package se.phh.message;
 
 public class Message implements MessageContent{
     
-    private String theMessage;
+    public static final String DEFAULT = "Hello world!";;
+	private String theMessage;
     
     public Message(String message) {
         theMessage = message;

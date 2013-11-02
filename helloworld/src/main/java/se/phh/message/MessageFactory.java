@@ -12,6 +12,10 @@ public class MessageFactory {
 		if(instance== null) instance = new MessageFactory();
 		return instance;
 	}
+	public MessageContent getMessage(){
+		
+	}
+	
 	
 	public MessageContent getMessageType(String messageValue){
 		return getMessageType(MESSAGE_DEFAULT,messageValue);
