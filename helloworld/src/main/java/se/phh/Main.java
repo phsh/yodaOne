@@ -2,7 +2,6 @@ package se.phh;
 
 import java.util.logging.Logger;
 
-import se.phh.message.Message;
 import se.phh.message.MessageContent;
 import se.phh.sayers.Sayer;
 
