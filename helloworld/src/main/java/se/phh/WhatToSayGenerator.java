@@ -24,9 +24,9 @@ public class WhatToSayGenerator {
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
 				MessageFactory.MESSAGE, MESSAGE));
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
-				MessageFactory.MESSAGE_LOUD, MESSAGE));
+				MessageFactory.MESSAGE_TYPE_LOUD, MESSAGE));
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
-				MessageFactory.MESSAGE_QUITE, MESSAGE));
+				MessageFactory.MESSAGE_TYPE_QUITE, MESSAGE));
 		return whatToSay;
 	}
 }
