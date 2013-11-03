@@ -5,7 +5,7 @@ public class SayerFactory {
 	public  static final String SAYER_OUT="SAYER_OUT";
 	public static final String SAYER_ERR="SAYER_ERR";
 	public  static final String SAYER_JUL= "SAYER_JUL";
-	public static final String SAYER_DEFAILT="DEFAULT";
+	public static final String SAYER_DEFAULT="DEFAULT";
 	private SayerFactory(){
 		
 	}
@@ -16,7 +16,7 @@ public class SayerFactory {
 	}
 	
 	public Sayer getSayer(){
-		return getSayer(SayerFactory.SAYER_DEFAILT);
+		return getSayer(SayerFactory.SAYER_DEFAULT);
 	}
 	
 	public Sayer getSayer(String typeOfSayer){
