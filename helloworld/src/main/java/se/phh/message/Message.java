@@ -10,7 +10,6 @@ public class Message implements MessageContent{
 		theMessage = DEFAULT;
 	}
 	
-	
     public Message(String message) {
         theMessage = message;
     }
