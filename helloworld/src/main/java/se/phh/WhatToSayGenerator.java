@@ -9,7 +9,7 @@ import se.phh.message.MessageFactory;
 public class WhatToSayGenerator {
 	private static WhatToSayGenerator instance = null;
 	private static final String MESSAGE = "Hello world!";
-	
+
 	private WhatToSayGenerator() {
 	}
 
