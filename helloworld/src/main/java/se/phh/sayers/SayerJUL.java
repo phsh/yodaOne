@@ -4,7 +4,7 @@ import se.phh.message.MessageContent;
 
 import java.util.logging.Logger;
 
-public class SayerJUL implements Sayer{
+public class SayerJUL implements Sayer {
 	private static Logger logger = Logger.getLogger(SayerJUL.class.getName());
 
 	public void say(MessageContent message) {
