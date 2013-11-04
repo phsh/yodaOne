@@ -2,7 +2,7 @@ package se.phh.message;
 
 public class MessageFactory {
 	private static MessageFactory instance = null;
-	public static final String MESSAGE = "MESSAGE";
+	public static final String MESSAGE_TYPE_STANDARD = "MESSAGE";
 	public static final String MESSAGE_TYPE_QUITE = "MESSAGE_QUITE";
 	public static final String MESSAGE_TYPE_LOUD = "MESSAGE_LOUD";
 	public static final String MESSAGE_TYPE_DEFAULT = "DEFAULT";
@@ -14,7 +14,7 @@ public class MessageFactory {
 	}
 	
 	public MessageContent getMessage(){
-		return getMessageType(MessageFactory.MESSAGE);
+		return getMessageType(MessageFactory.MESSAGE_TYPE_STANDARD);
 	}
 	
 	public MessageContent getMessageType(String messageValue){
@@ -23,14 +23,14 @@ public class MessageFactory {
 	
 	public MessageContent getMessageType(String messageType, String messageValue){
 		MessageContent returner = null;
-		if(messageType.equals(MESSAGE)){
+		if(messageType.equals(MESSAGE_TYPE_STANDARD)){
 			returner  = new Message(messageValue);
 		} else if(messageType.equals(MESSAGE_TYPE_QUITE)){
 			returner  = new QuiteMessage(messageValue);
 		} else if(messageType.equals(MESSAGE_TYPE_LOUD)){
 			returner  = new LoudMessage(messageValue);
 		} else {
-			returner = getMessageType(MessageFactory.MESSAGE, "[" + messageType + "] "+messageValue);
+			returner = getMessageType(MessageFactory.MESSAGE_TYPE_STANDARD, "[" + messageType + "] "+messageValue);
 		}
 		
 		return returner;

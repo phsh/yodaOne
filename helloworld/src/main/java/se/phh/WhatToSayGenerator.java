@@ -22,7 +22,7 @@ public class WhatToSayGenerator {
 	public List<MessageContent> getWhatToSay() {
 		List<MessageContent> whatToSay = new ArrayList<MessageContent>();
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
-				MessageFactory.MESSAGE, MESSAGE));
+				MessageFactory.MESSAGE_TYPE_STANDARD, MESSAGE));
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
 				MessageFactory.MESSAGE_TYPE_LOUD, MESSAGE));
 		whatToSay.add(MessageFactory.getInstance().getMessageType(
