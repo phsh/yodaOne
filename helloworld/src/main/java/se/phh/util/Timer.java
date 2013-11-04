@@ -5,7 +5,7 @@ public class Timer {
 	private long totalTime = 0;
 	private String clazz = null;
 	
-	Timer(String _clazzName){
+	public Timer(String _clazzName){
 		clazz = _clazzName;
 	}
 	
