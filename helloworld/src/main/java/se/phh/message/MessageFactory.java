@@ -36,7 +36,6 @@ public class MessageFactory {
 			returner = getMessageType(MessageFactory.MESSAGE_TYPE_STANDARD, "["
 					+ messageType + "] " + messageValue);
 		}
-
 		return returner;
 	}
 }
