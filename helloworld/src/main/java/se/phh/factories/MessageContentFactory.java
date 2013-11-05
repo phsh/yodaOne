@@ -11,6 +11,8 @@ public class MessageContentFactory {
 	public static final String MESSAGE_TYPE_QUITE = "MESSAGE_QUITE";
 	public static final String MESSAGE_TYPE_LOUD = "MESSAGE_LOUD";
 	public static final String MESSAGE_TYPE_DEFAULT = "DEFAULT";
+	
+	private static final String DEFAULT_MESSAGEVALUE = "DEFAULT MESSAGE";
 
 	private MessageContentFactory() {
 	}
@@ -22,10 +24,10 @@ public class MessageContentFactory {
 	}
 
 	public MessageContent getMessage() {
-		return getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD);
+		return getMessageOfDefaultType(DEFAULT_MESSAGEVALUE);
 	}
 
-	public MessageContent getMessageType(String messageValue) {
+	public MessageContent getMessageOfDefaultType(String messageValue) {
 		return getMessageType(MESSAGE_TYPE_DEFAULT, messageValue);
 	}
 
