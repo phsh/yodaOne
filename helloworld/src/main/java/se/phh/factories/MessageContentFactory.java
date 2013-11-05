@@ -7,10 +7,11 @@ import se.phh.message.QuiteMessage;
 
 public class MessageContentFactory {
 	private static MessageContentFactory instance = null;
-	public static final String MESSAGE_TYPE_STANDARD = "MESSAGE";
-	public static final String MESSAGE_TYPE_QUITE = "MESSAGE_QUITE";
-	public static final String MESSAGE_TYPE_LOUD = "MESSAGE_LOUD";
-	public static final String MESSAGE_TYPE_DEFAULT = "DEFAULT";
+	
+	public static final int MESSAGE_TYPE_STANDARD = 1000;
+	public static final int MESSAGE_TYPE_QUITE = 1001;
+	public static final int MESSAGE_TYPE_LOUD = 1002;
+	public static final int MESSAGE_TYPE_DEFAULT = 1;
 	
 	private static final String DEFAULT_MESSAGEVALUE = "DEFAULT MESSAGE";
 
@@ -31,13 +32,13 @@ public class MessageContentFactory {
 		return getMessageType(MESSAGE_TYPE_DEFAULT, messageValue);
 	}
 
-	public MessageContent getMessageType(String messageType, String messageValue) {
+	public MessageContent getMessageType(int messageType, String messageValue) {
 		MessageContent returner = null;
-		if (messageType.equals(MESSAGE_TYPE_STANDARD)) {
+		if (messageType == MESSAGE_TYPE_STANDARD) {
 			returner = new Message(messageValue);
-		} else if (messageType.equals(MESSAGE_TYPE_QUITE)) {
+		} else if (messageType == MESSAGE_TYPE_QUITE) {
 			returner = new QuiteMessage(messageValue);
-		} else if (messageType.equals(MESSAGE_TYPE_LOUD)) {
+		} else if (messageType==MESSAGE_TYPE_LOUD) {
 			returner = new LoudMessage(messageValue);
 		} else {
 			returner = getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD, "["
