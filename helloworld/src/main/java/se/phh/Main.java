@@ -13,7 +13,7 @@ public class Main {
 		Timer timer = new Timer(Main.class.getName());
 		timer.startTimer();
 		logger.info("start of main");
-		for (MessageContent mc : WhatToSayGenerator.getInstance()
+		for (MessageContent mc : MessageContentGenerator.getInstance()
 				.getWhatToSay()) {
 			sayWhat(mc);
 		}
@@ -23,7 +23,7 @@ public class Main {
 	}
 
 	private static void sayWhat(MessageContent mc) {
-		for (Sayer s : HowToSayItGenerator.getInstance().getSayers()) {
+		for (Sayer s : SayerGenerator.getInstance().getSayers()) {
 			s.say(mc);
 		}
 	}
