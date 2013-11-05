@@ -5,24 +5,24 @@ import se.phh.message.Message;
 import se.phh.message.MessageContent;
 import se.phh.message.QuiteMessage;
 
-public class MessageFactory {
-	private static MessageFactory instance = null;
+public class MessageContentFactory {
+	private static MessageContentFactory instance = null;
 	public static final String MESSAGE_TYPE_STANDARD = "MESSAGE";
 	public static final String MESSAGE_TYPE_QUITE = "MESSAGE_QUITE";
 	public static final String MESSAGE_TYPE_LOUD = "MESSAGE_LOUD";
 	public static final String MESSAGE_TYPE_DEFAULT = "DEFAULT";
 
-	private MessageFactory() {
+	private MessageContentFactory() {
 	}
 
-	public static MessageFactory getInstance() {
+	public static MessageContentFactory getInstance() {
 		if (instance == null)
-			instance = new MessageFactory();
+			instance = new MessageContentFactory();
 		return instance;
 	}
 
 	public MessageContent getMessage() {
-		return getMessageType(MessageFactory.MESSAGE_TYPE_STANDARD);
+		return getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD);
 	}
 
 	public MessageContent getMessageType(String messageValue) {
@@ -38,7 +38,7 @@ public class MessageFactory {
 		} else if (messageType.equals(MESSAGE_TYPE_LOUD)) {
 			returner = new LoudMessage(messageValue);
 		} else {
-			returner = getMessageType(MessageFactory.MESSAGE_TYPE_STANDARD, "["
+			returner = getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD, "["
 					+ messageType + "] " + messageValue);
 		}
 		return returner;

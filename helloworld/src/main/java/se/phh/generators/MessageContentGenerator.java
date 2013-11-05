@@ -2,13 +2,13 @@ package se.phh.generators;
 
 import java.util.List;
 
-import se.phh.factories.MessageFactory;
+import se.phh.factories.MessageContentFactory;
 import se.phh.message.MessageContent;
 import se.phh.pools.MessageContentPool;
 
 public class MessageContentGenerator {
 	private static MessageContentGenerator instance = null;
-	private static MessageFactory factory = MessageFactory.getInstance();
+	private static MessageContentFactory factory = MessageContentFactory.getInstance();
 	private static final String MESSAGE = "Hello world!";
 	private MessageContentPool pool;
 
@@ -26,11 +26,11 @@ public class MessageContentGenerator {
 
 	private void init() {
 		pool = new MessageContentPool();
-		pool.add(factory.getMessageType(MessageFactory.MESSAGE_TYPE_STANDARD,
+		pool.add(factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD,
 				MESSAGE));
-		pool.add(factory.getMessageType(MessageFactory.MESSAGE_TYPE_LOUD,
+		pool.add(factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_LOUD,
 				MESSAGE));
-		pool.add(factory.getMessageType(MessageFactory.MESSAGE_TYPE_QUITE,
+		pool.add(factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_QUITE,
 				MESSAGE));
 
 	}
