@@ -5,10 +5,12 @@ import java.util.List;
 
 import se.phh.sayers.Sayer;
 import se.phh.sayers.SayerFactory;
+import se.phh.sayers.SayerPool;
 
 public class HowToSayItGenerator {
 	private static HowToSayItGenerator instance = null;
-
+	private SayerPool pool;
+	
 	private HowToSayItGenerator() {
 	}
 
@@ -17,7 +19,12 @@ public class HowToSayItGenerator {
 			instance = new HowToSayItGenerator();
 		return instance;
 	}
-
+	
+	private void init(){
+		pool = new SayerPool();
+	}
+	
+	
 	public List<Sayer> getSayers() {
 		List<Sayer> returner = new ArrayList<Sayer>();
 		returner.add(SayerFactory.getInstance()
