@@ -2,9 +2,9 @@ package se.phh.generators;
 
 import java.util.List;
 
+import se.phh.factories.SayerFactory;
+import se.phh.pools.SayerPool;
 import se.phh.sayers.Sayer;
-import se.phh.sayers.SayerFactory;
-import se.phh.sayers.SayerPool;
 
 public class SayerGenerator {
 	private static SayerGenerator instance = null;

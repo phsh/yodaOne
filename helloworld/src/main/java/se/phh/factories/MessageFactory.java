@@ -1,4 +1,9 @@
-package se.phh.message;
+package se.phh.factories;
+
+import se.phh.message.LoudMessage;
+import se.phh.message.Message;
+import se.phh.message.MessageContent;
+import se.phh.message.QuiteMessage;
 
 public class MessageFactory {
 	private static MessageFactory instance = null;

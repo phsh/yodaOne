@@ -2,9 +2,9 @@ package se.phh.generators;
 
 import java.util.List;
 
+import se.phh.factories.MessageFactory;
 import se.phh.message.MessageContent;
-import se.phh.message.MessageFactory;
-import se.phh.message.MessageContentPool;
+import se.phh.pools.MessageContentPool;
 
 public class MessageContentGenerator {
 	private static MessageContentGenerator instance = null;

@@ -1,7 +1,9 @@
-package se.phh.sayers;
+package se.phh.pools;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import se.phh.sayers.Sayer;
 public class SayerPool {
 	
 	private List<Sayer> listOfSayers = new ArrayList<Sayer>();

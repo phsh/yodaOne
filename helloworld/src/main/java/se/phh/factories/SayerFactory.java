@@ -1,4 +1,9 @@
-package se.phh.sayers;
+package se.phh.factories;
+
+import se.phh.sayers.Sayer;
+import se.phh.sayers.SayerJUL;
+import se.phh.sayers.SayerSystemErr;
+import se.phh.sayers.SayerSystemOut;
 
 public class SayerFactory {
 
