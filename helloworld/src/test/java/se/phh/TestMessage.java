@@ -2,13 +2,13 @@ package se.phh;
 
 import org.junit.Test;
 
-import se.phh.message.Message;
+import se.phh.message.Standard;
 import static org.junit.Assert.assertEquals;
 public class TestMessage{
 	
 	@Test
 	public void checkMessage(){
-		Message message = new Message("message");
+		Standard message = new Standard("message");
 		assertEquals("This should be equal", "message", message.getMessage());
 	}
 }

@@ -1,14 +1,14 @@
 package se.phh.message;
 
-public class Message implements MessageContent {
+public class Standard implements MessageContent {
 
 	private String theMessage;
 
-	public Message() {
+	public Standard() {
 		theMessage = DEFAULT;
 	}
 
-	public Message(String message) {
+	public Standard(String message) {
 		theMessage = message;
 	}
 
