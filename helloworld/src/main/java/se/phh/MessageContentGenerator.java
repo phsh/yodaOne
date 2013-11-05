@@ -5,11 +5,14 @@ import java.util.List;
 
 import se.phh.message.MessageContent;
 import se.phh.message.MessageFactory;
+import se.phh.message.MessageContentPool;
+
 
 public class MessageContentGenerator {
 	private static MessageContentGenerator instance = null;
+	private static MessageFactory factory = MessageFactory.getInstance();
 	private static final String MESSAGE = "Hello world!";
-	
+	private MessageContentPool pool;
 	private MessageContentGenerator() {
 	}
 
@@ -19,6 +22,9 @@ public class MessageContentGenerator {
 		return instance;
 	}
 	
+	private void init(){
+		pool = new MessageContentPool();
+	}
 	
 	public List<MessageContent> getWhatToSay() {
 		List<MessageContent> whatToSay = new ArrayList<MessageContent>();
