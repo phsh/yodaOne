@@ -5,6 +5,8 @@ import java.util.logging.Logger;
 import se.phh.message.MessageContent;
 import se.phh.sayers.Sayer;
 import se.phh.util.Timer;
+import se.phh.generators.MessageContentGenerator;
+import se.phh.generators.SayerGenerator;
 
 public class Main {
 	private static Logger logger = Logger.getLogger(Main.class.getName());

@@ -1,4 +1,4 @@
-package se.phh;
+package se.phh.generators;
 
 import java.util.List;
 
