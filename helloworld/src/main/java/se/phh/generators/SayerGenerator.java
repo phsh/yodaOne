@@ -29,7 +29,7 @@ public class SayerGenerator {
 		pool.add(factory.getSayer(SayerFactory.SAYER_JUL));
 	}
 
-	public List<Sayer> getSayers() {
+	public List<Sayer> get() {
 		return pool.get();
 	}
 }

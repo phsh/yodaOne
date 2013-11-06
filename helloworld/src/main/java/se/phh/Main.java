@@ -25,7 +25,7 @@ public class Main {
 	}
 
 	private static void sayWhat(MessageContent mc) {
-		for (Sayer s : SayerGenerator.getInstance().getSayers()) {
+		for (Sayer s : SayerGenerator.getInstance().get()) {
 			s.say(mc);
 		}
 	}
