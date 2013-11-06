@@ -16,7 +16,7 @@ public class Main {
 		timer.startTimer();
 		logger.info("start of main");
 		for (MessageContent mc : MessageContentGenerator.getInstance()
-				.getWhatToSay()) {
+				.get()) {
 			sayWhat(mc);
 		}
 		logger.info("end of main");

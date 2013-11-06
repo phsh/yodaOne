@@ -36,7 +36,7 @@ public class MessageContentGenerator {
 
 	}
 
-	public List<MessageContent> getWhatToSay() {
+	public List<MessageContent> get() {
 		return pool.get();
 	}
 }
