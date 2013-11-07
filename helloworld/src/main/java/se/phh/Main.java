@@ -4,6 +4,7 @@ import se.phh.generators.MessageContentGenerator;
 import se.phh.generators.SayerGenerator;
 import se.phh.message.MessageContent;
 import se.phh.sayers.Sayer;
+import se.phh.world.World;
 
 public class Main {
 	private static MessageContentGenerator messageGenerator = MessageContentGenerator
@@ -18,7 +19,7 @@ public class Main {
 
 	private static void sayWhat(MessageContent mc) {
 		for (Sayer s : sayerGenerator.get()) {
-			s.say(mc);
+			World.getInstance().sayHello(s, mc);
 		}
 	}
 }
