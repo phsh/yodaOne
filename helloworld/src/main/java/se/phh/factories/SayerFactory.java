@@ -14,7 +14,6 @@ public class SayerFactory {
 	public static final String SAYER_DEFAULT = "DEFAULT";
 
 	private SayerFactory() {
-
 	}
 
 	public static SayerFactory getInstance() {
