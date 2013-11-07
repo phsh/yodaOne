@@ -35,16 +35,29 @@ public class MessageContentFactory {
 	public MessageContent getMessageType(int messageType, String messageValue) {
 		MessageContent returner = null;
 		if (messageType == MESSAGE_TYPE_STANDARD) {
-			returner = new Standard(messageValue);
+			returner = createStandard(messageValue);
 		} else if (messageType == MESSAGE_TYPE_QUITE) {
-			returner = new Quite(messageValue);
+			returner = createQuite(messageValue);
 		} else if (messageType == MESSAGE_TYPE_LOUD) {
-			returner = new Loud(messageValue);
+			returner = createLoud(messageValue);
 		} else {
 			returner = getMessageType(
 					MessageContentFactory.MESSAGE_TYPE_STANDARD, "["
 							+ messageType + "] " + messageValue);
 		}
 		return returner;
+	}
+	
+	
+	private MessageContent createStandard(String messageValue){
+		return new Standard(messageValue);
+	}
+	
+	private MessageContent createLoud(String messageValue){
+		return new Loud(messageValue);
+	}
+	
+	private MessageContent createQuite(String messageValue){
+		return new Quite(messageValue);
 	}
 }
