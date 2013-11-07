@@ -1,15 +1,14 @@
 package se.phh.message;
 
-public class Quite implements MessageContent {
-	private Standard theMessage;
+public class Quite extends Message {
 	private static final String QUITE_PREFIX = "[QUITE] ";
 
 	public Quite(String message) {
-		this.theMessage = new Standard(QUITE_PREFIX + message);
+		super(message);
 	}
 
 	public String getMessage() {
-		return theMessage.getMessage();
+		return QUITE_PREFIX + getMessageValue();
 	}
 
 }

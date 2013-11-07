@@ -1,15 +1,15 @@
 package se.phh.message;
 
-public class Loud implements MessageContent {
-	private Standard theMessage;
+public class Loud extends Message {
+
 	private static final String LOUD_PREFIX = "[LOUD] ";
 
-	public Loud(String message) {
-		theMessage = new Standard(LOUD_PREFIX + message);
+	public Loud(String messageValue) {
+		super(messageValue);
 	}
 
 	public String getMessage() {
-		return theMessage.getMessage();
+		return LOUD_PREFIX + getMessageValue();
 	}
 
 }
