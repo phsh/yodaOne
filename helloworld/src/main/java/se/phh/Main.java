@@ -10,13 +10,16 @@ import se.phh.generators.SayerGenerator;
 
 public class Main {
 	private static Logger logger = Logger.getLogger(Main.class.getName());
-
+	
+	private static MessageContentGenerator messageContentGenerator = MessageContentGenerator.getInstance();
+	private static SayerGenerator sayerGenerator = SayerGenerator.getInstance();
+	
 	public static void main(String... args) {
 		Timer timer = new Timer(Main.class.getName());
 		timer.startTimer();
 		logger.info("start of main");
-		for (MessageContent mc : MessageContentGenerator.getInstance()
-				.get()) {
+		for (MessageContent mc : 
+				messageContentGenerator.get()) {
 			sayWhat(mc);
 		}
 		logger.info("end of main");
@@ -25,7 +28,7 @@ public class Main {
 	}
 
 	private static void sayWhat(MessageContent mc) {
-		for (Sayer s : SayerGenerator.getInstance().get()) {
+		for (Sayer s : sayerGenerator.get()) {
 			s.say(mc);
 		}
 	}
