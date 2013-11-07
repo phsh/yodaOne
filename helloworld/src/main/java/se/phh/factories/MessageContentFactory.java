@@ -33,28 +33,25 @@ public class MessageContentFactory {
 	}
 
 	public MessageContent getMessageType(int messageType, String messageValue) {
-		MessageContent returner = null;
-		if (messageType == MESSAGE_TYPE_STANDARD) {
-			returner = createStandard(messageValue);
-		} else if (messageType == MESSAGE_TYPE_QUITE) {
-			returner = createQuite(messageValue);
-		} else if (messageType == MESSAGE_TYPE_LOUD) {
-			returner = createLoud(messageValue);
-		} else {
-			returner = createStandard("[" + messageType + "] " + messageValue);
+		String setMessageValue = messageValue;
+		MessageContent returner = getMessageContent(messageType);
+		if (returner == null) {
+			returner = new Standard();
+			setMessageValue = "[" + messageType + "] " + messageValue;
 		}
+		returner.setMessageValue(setMessageValue);
 		return returner;
 	}
 
-	private MessageContent createStandard(String messageValue) {
-		return new Standard(messageValue);
-	}
-
-	private MessageContent createLoud(String messageValue) {
-		return new Loud(messageValue);
-	}
-
-	private MessageContent createQuite(String messageValue) {
-		return new Quite(messageValue);
+	private MessageContent getMessageContent(int messageType) {
+		MessageContent messageContent = null;
+		if (messageType == MESSAGE_TYPE_STANDARD) {
+			messageContent = new Standard();
+		} else if (messageType == MESSAGE_TYPE_QUITE) {
+			messageContent = new Quite();
+		} else if (messageType == MESSAGE_TYPE_LOUD) {
+			messageContent = new Loud();
+		}
+		return messageContent;
 	}
 }

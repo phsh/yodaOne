@@ -5,4 +5,6 @@ public interface MessageContent {
 	public static final String DEFAULT = "Hello world!";
 
 	String getMessage();
+	
+	void setMessageValue(String messageValue);
 }
