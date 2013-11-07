@@ -1,6 +1,6 @@
 package se.phh.message;
 
-public class Standard extends Message implements MessageContent {
+public class Standard extends Message {
 
 	public Standard(String message) {
 		super(message);
