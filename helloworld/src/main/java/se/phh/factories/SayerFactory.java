@@ -35,8 +35,7 @@ public class SayerFactory {
 			returner = new SayerSystemErr();
 		} else if (typeOfSayer.equals(SAYER_JUL)) {
 			returner = new SayerJUL();
-		}
-		if (returner == null) {
+		} else {
 			returner = getSayer(SAYER_OUT);
 		}
 		return returner;
