@@ -7,14 +7,14 @@ import se.phh.generators.MessageContentGenerator;
 import se.phh.generators.SayerGenerator;
 
 public class Main {
-	private static MessageContentGenerator messageContentGenerator = MessageContentGenerator
+	private static MessageContentGenerator messageGenerator = MessageContentGenerator
 			.getInstance();
 	private static SayerGenerator sayerGenerator = SayerGenerator.getInstance();
 
 	public static void main(String... args) {
 		Timer timer = new Timer(Main.class.getName());
 		timer.startTimer();
-		for (MessageContent mc : messageContentGenerator.get()) {
+		for (MessageContent mc : messageGenerator.get()) {
 			sayWhat(mc);
 		}
 		timer.stopTime();
