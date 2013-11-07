@@ -41,23 +41,20 @@ public class MessageContentFactory {
 		} else if (messageType == MESSAGE_TYPE_LOUD) {
 			returner = createLoud(messageValue);
 		} else {
-			returner = getMessageType(
-					MessageContentFactory.MESSAGE_TYPE_STANDARD, "["
-							+ messageType + "] " + messageValue);
+			returner = createStandard("[" + messageType + "] " + messageValue);
 		}
 		return returner;
 	}
-	
-	
-	private MessageContent createStandard(String messageValue){
+
+	private MessageContent createStandard(String messageValue) {
 		return new Standard(messageValue);
 	}
-	
-	private MessageContent createLoud(String messageValue){
+
+	private MessageContent createLoud(String messageValue) {
 		return new Loud(messageValue);
 	}
-	
-	private MessageContent createQuite(String messageValue){
+
+	private MessageContent createQuite(String messageValue) {
 		return new Quite(messageValue);
 	}
 }
