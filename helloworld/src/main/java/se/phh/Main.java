@@ -1,10 +1,9 @@
 package se.phh;
 
-import se.phh.message.MessageContent;
-import se.phh.sayers.Sayer;
-import se.phh.util.Timer;
 import se.phh.generators.MessageContentGenerator;
 import se.phh.generators.SayerGenerator;
+import se.phh.message.MessageContent;
+import se.phh.sayers.Sayer;
 
 public class Main {
 	private static MessageContentGenerator messageGenerator = MessageContentGenerator
@@ -12,12 +11,9 @@ public class Main {
 	private static SayerGenerator sayerGenerator = SayerGenerator.getInstance();
 
 	public static void main(String... args) {
-		Timer timer = new Timer(Main.class.getName());
-		timer.startTimer();
 		for (MessageContent mc : messageGenerator.get()) {
 			sayWhat(mc);
 		}
-		timer.stopTime();
 	}
 
 	private static void sayWhat(MessageContent mc) {
