@@ -8,7 +8,8 @@ public class TestMessage{
 	
 	@Test
 	public void checkMessage(){
-		Standard message = new Standard("message");
+		Standard message = new Standard();
+		message.setMessageValue("message");
 		assertEquals("This should be equal", "message", message.getMessage());
 	}
 }
