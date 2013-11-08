@@ -13,9 +13,6 @@ public class MessageContentFactory {
 	public static final int MESSAGE_TYPE_LOUD = 1002;
 	public static final int MESSAGE_TYPE_DEFAULT = 1;
 
-	private static final StringBuilder DEFAULT_MESSAGEVALUE = new StringBuilder(
-			"DEFAULT MESSAGE");
-
 	private MessageContentFactory() {
 	}
 
@@ -23,10 +20,6 @@ public class MessageContentFactory {
 		if (instance == null)
 			instance = new MessageContentFactory();
 		return instance;
-	}
-
-	public MessageContent getMessage() {
-		return getMessageOfDefaultType(DEFAULT_MESSAGEVALUE);
 	}
 
 	public MessageContent getMessageOfDefaultType(StringBuilder messageValue) {

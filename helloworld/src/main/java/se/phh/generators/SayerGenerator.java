@@ -17,12 +17,12 @@ public class SayerGenerator {
 	public static SayerGenerator getInstance() {
 		if (instance == null) {
 			instance = new SayerGenerator();
-			instance.init();
+			instance.populate();
 		}
 		return instance;
 	}
 
-	private void init() {
+	private void populate() {
 		pool = new SayerPool();
 		pool.add(factory.getSayer(SayerFactory.SAYER_OUT));
 		pool.add(factory.getSayer(SayerFactory.SAYER_ERR));

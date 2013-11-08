@@ -20,13 +20,12 @@ public class MessageContentGenerator {
 	public static MessageContentGenerator getInstance() {
 		if (instance == null) {
 			instance = new MessageContentGenerator();
-			instance.init();
+			instance.populate();
 		}
-
 		return instance;
 	}
 
-	private void init() {
+	private void populate() {
 		pool = new MessageContentPool();
 		pool.add(factory.getMessageType(
 				MessageContentFactory.MESSAGE_TYPE_STANDARD, MESSAGE));
@@ -34,7 +33,6 @@ public class MessageContentGenerator {
 				MessageContentFactory.MESSAGE_TYPE_LOUD, MESSAGE));
 		pool.add(factory.getMessageType(
 				MessageContentFactory.MESSAGE_TYPE_QUITE, MESSAGE));
-
 	}
 
 	public List<MessageContent> get() {
