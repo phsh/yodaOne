@@ -5,7 +5,7 @@ import org.junit.Test;
 import se.phh.message.Standard;
 import static org.junit.Assert.assertEquals;
 
-public class TestMessage {
+public class TestStandardMessage {
 
 	@Test
 	public void checkMessage() {
