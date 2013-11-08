@@ -1,4 +1,4 @@
-package se.phh;
+package se.phh.message;
 
 import org.junit.Test;
 
