@@ -10,7 +10,8 @@ public class MessageContentGenerator {
 	private static MessageContentGenerator instance = null;
 	private static MessageContentFactory factory = MessageContentFactory
 			.getInstance();
-	private static final StringBuilder MESSAGE = new StringBuilder("Hello world!");
+	private static final StringBuilder MESSAGE = new StringBuilder(
+			"Hello world!");
 	private MessageContentPool pool;
 
 	private MessageContentGenerator() {

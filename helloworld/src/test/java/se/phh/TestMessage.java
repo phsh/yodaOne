@@ -12,6 +12,7 @@ public class TestMessage {
 		Standard message = new Standard();
 		StringBuilder messageContent = new StringBuilder("message");
 		message.setMessageValue(messageContent);
-		assertEquals("This should be equal", messageContent, message.getMessage());
+		assertEquals("This should be equal", messageContent,
+				message.getMessage());
 	}
 }

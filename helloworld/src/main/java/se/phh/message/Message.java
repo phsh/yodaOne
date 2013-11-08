@@ -9,8 +9,8 @@ public abstract class Message implements MessageContent {
 	public final StringBuilder getMessageValue() {
 		return messageValue;
 	}
-	
-	public void setMessageValue(StringBuilder messageValue){
+
+	public void setMessageValue(StringBuilder messageValue) {
 		this.messageValue = messageValue;
 	}
 }
