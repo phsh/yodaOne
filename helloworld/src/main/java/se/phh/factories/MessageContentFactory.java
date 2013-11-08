@@ -22,9 +22,6 @@ public class MessageContentFactory {
 		return instance;
 	}
 
-	public MessageContent getMessageOfDefaultType(StringBuilder messageValue) {
-		return getMessageType(MESSAGE_TYPE_DEFAULT, messageValue);
-	}
 
 	public MessageContent getMessageType(int messageType,
 			StringBuilder messageValue) {
