@@ -5,11 +5,11 @@ import java.util.List;
 
 import se.phh.sayers.Sayer;
 
-public class SayerPool {
+public class SayerList {
 
 	private List<Sayer> listOfSayers = new ArrayList<Sayer>();
 
-	public SayerPool() {
+	public SayerList() {
 	}
 
 	public void add(Sayer s) {

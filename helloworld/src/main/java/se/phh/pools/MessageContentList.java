@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 import se.phh.message.MessageContent;
 
-public class MessageContentPool {
+public class MessageContentList {
 	private List<MessageContent> listOfMessageContent = new ArrayList<MessageContent>();
 
-	public MessageContentPool() {
+	public MessageContentList() {
 	}
 
 	public void add(MessageContent messageContent) {

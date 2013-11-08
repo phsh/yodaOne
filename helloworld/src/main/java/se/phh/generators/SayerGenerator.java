@@ -3,13 +3,13 @@ package se.phh.generators;
 import java.util.List;
 
 import se.phh.factories.SayerFactory;
-import se.phh.pools.SayerPool;
+import se.phh.pools.SayerList;
 import se.phh.sayers.Sayer;
 
 public class SayerGenerator implements Generator<Sayer> {
 	private static SayerGenerator instance = null;
 	private static SayerFactory factory = SayerFactory.getInstance();
-	private SayerPool pool;
+	private SayerList pool;
 
 	private SayerGenerator() {
 	}
@@ -23,7 +23,7 @@ public class SayerGenerator implements Generator<Sayer> {
 	}
 
 	private void populate() {
-		pool = new SayerPool();
+		pool = new SayerList();
 		pool.add(factory.getSayer(SayerFactory.SAYER_OUT));
 		pool.add(factory.getSayer(SayerFactory.SAYER_ERR));
 		pool.add(factory.getSayer(SayerFactory.SAYER_JUL));

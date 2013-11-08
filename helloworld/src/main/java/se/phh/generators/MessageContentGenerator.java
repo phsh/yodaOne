@@ -4,7 +4,7 @@ import java.util.List;
 
 import se.phh.factories.MessageContentFactory;
 import se.phh.message.MessageContent;
-import se.phh.pools.MessageContentPool;
+import se.phh.pools.MessageContentList;
 
 public class MessageContentGenerator implements Generator<MessageContent> {
 	private static MessageContentGenerator instance = null;
@@ -12,7 +12,7 @@ public class MessageContentGenerator implements Generator<MessageContent> {
 			.getInstance();
 	private static final StringBuilder MESSAGE = new StringBuilder(
 			"Hello world!");
-	private MessageContentPool pool;
+	private MessageContentList pool;
 
 	private MessageContentGenerator() {
 	}
@@ -26,7 +26,7 @@ public class MessageContentGenerator implements Generator<MessageContent> {
 	}
 
 	private void populate() {
-		pool = new MessageContentPool();
+		pool = new MessageContentList();
 		pool.add(factory.getMessageType(
 				MessageContentFactory.MESSAGE_TYPE_STANDARD, MESSAGE));
 		pool.add(factory.getMessageType(
