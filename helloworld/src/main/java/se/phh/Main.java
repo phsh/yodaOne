@@ -19,7 +19,7 @@ public class Main {
 
 	private static void sayWhat(MessageContent mc) {
 		for (Sayer s : sayerGenerator.get()) {
-			World.getInstance().sayHello(s, mc);
+			World.getInstance().say(s, mc);
 		}
 	}
 }

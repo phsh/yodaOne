@@ -6,7 +6,7 @@ import se.phh.factories.MessageContentFactory;
 import se.phh.message.MessageContent;
 import se.phh.pools.MessageContentPool;
 
-public class MessageContentGenerator implements Generator<MessageContent>{
+public class MessageContentGenerator implements Generator<MessageContent> {
 	private static MessageContentGenerator instance = null;
 	private static MessageContentFactory factory = MessageContentFactory
 			.getInstance();
