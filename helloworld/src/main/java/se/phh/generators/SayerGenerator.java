@@ -6,7 +6,7 @@ import se.phh.factories.SayerFactory;
 import se.phh.pools.SayerPool;
 import se.phh.sayers.Sayer;
 
-public class SayerGenerator {
+public class SayerGenerator implements Generator<Sayer> {
 	private static SayerGenerator instance = null;
 	private static SayerFactory factory = SayerFactory.getInstance();
 	private SayerPool pool;
