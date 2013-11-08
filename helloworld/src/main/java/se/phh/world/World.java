@@ -2,7 +2,6 @@ package se.phh.world;
 
 import se.phh.generators.SayerGenerator;
 import se.phh.message.MessageContent;
-import se.phh.pools.SayerPool;
 import se.phh.sayers.Sayer;
 
 public class World {
