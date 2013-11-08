@@ -10,7 +10,8 @@ public class TestMessage {
 	@Test
 	public void checkMessage() {
 		Standard message = new Standard();
-		message.setMessageValue("message");
-		assertEquals("This should be equal", "message", message.getMessage());
+		StringBuilder messageContent = new StringBuilder("message");
+		message.setMessageValue(messageContent);
+		assertEquals("This should be equal", messageContent, message.getMessage());
 	}
 }

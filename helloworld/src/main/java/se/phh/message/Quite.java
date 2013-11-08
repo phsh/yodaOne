@@ -7,8 +7,8 @@ public class Quite extends Message {
 		super();
 	}
 
-	public String getMessage() {
-		return QUITE_PREFIX + getMessageValue();
+	public StringBuilder getMessage() {
+		return new StringBuilder(QUITE_PREFIX).append(getMessageValue());
 	}
 
 }

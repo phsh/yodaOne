@@ -7,8 +7,8 @@ public class Loud extends Message {
 		super();
 	}
 
-	public String getMessage() {
-		return LOUD_PREFIX + getMessageValue();
+	public StringBuilder getMessage() {
+		return new StringBuilder(LOUD_PREFIX).append(getMessageValue());
 	}
 
 }

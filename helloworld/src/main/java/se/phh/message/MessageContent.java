@@ -2,9 +2,9 @@ package se.phh.message;
 
 public interface MessageContent {
 
-	public static final String DEFAULT = "Hello world!";
+	public static final StringBuilder DEFAULT = new StringBuilder("Hello world!");
 
-	String getMessage();
+	StringBuilder getMessage();
 	
-	void setMessageValue(String messageValue);
+	void setMessageValue(StringBuilder messageValue);
 }

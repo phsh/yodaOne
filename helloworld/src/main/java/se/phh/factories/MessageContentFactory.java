@@ -13,7 +13,7 @@ public class MessageContentFactory {
 	public static final int MESSAGE_TYPE_LOUD = 1002;
 	public static final int MESSAGE_TYPE_DEFAULT = 1;
 
-	private static final String DEFAULT_MESSAGEVALUE = "DEFAULT MESSAGE";
+	private static final StringBuilder DEFAULT_MESSAGEVALUE = new StringBuilder( "DEFAULT MESSAGE" );
 
 	private MessageContentFactory() {
 	}
@@ -28,16 +28,16 @@ public class MessageContentFactory {
 		return getMessageOfDefaultType(DEFAULT_MESSAGEVALUE);
 	}
 
-	public MessageContent getMessageOfDefaultType(String messageValue) {
+	public MessageContent getMessageOfDefaultType(StringBuilder messageValue) {
 		return getMessageType(MESSAGE_TYPE_DEFAULT, messageValue);
 	}
 
-	public MessageContent getMessageType(int messageType, String messageValue) {
-		String setMessageValue = messageValue;
+	public MessageContent getMessageType(int messageType, StringBuilder messageValue) {
+		StringBuilder setMessageValue = messageValue;
 		MessageContent returner = getMessageContent(messageType);
 		if (returner == null) {
 			returner = new Standard();
-			setMessageValue = "[" + messageType + "] " + messageValue;
+			setMessageValue = new StringBuilder("[").append(messageType).append("] ").append(messageValue);
 		}
 		returner.setMessageValue(setMessageValue);
 		return returner;

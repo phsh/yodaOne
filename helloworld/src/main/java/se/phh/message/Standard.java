@@ -6,7 +6,7 @@ public class Standard extends Message {
 		super();
 	}
 
-	public String getMessage() {
+	public StringBuilder getMessage() {
 		return this.getMessageValue();
 	}
 
