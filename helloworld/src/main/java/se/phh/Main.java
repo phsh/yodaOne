@@ -1,8 +1,8 @@
 package se.phh;
 
-import se.phh.generators.MessageContentGenerator;
 import se.phh.message.MessageContent;
 import se.phh.world.World;
+import se.phh.world.generators.MessageContentGenerator;
 
 public class Main {
 	private static MessageContentGenerator messageGenerator = MessageContentGenerator
