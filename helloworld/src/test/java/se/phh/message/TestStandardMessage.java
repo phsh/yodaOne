@@ -22,6 +22,5 @@ public class TestStandardMessage {
 		Standard message = new Standard();
 		message.setMessageValue(null);
 		assertNull("This should be null", message.getMessage());
-		
 	}
 }
