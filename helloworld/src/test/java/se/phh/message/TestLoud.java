@@ -11,17 +11,21 @@ public class TestLoud {
 		Loud message = new Loud();
 		StringBuilder messageContent = new StringBuilder("message");
 		message.setMessageValue(messageContent);
-		assertEquals("This should be equal", ("[LOUD] " + messageContent).toString(),
-				message.getMessage().toString());
+		StringBuilder whatIfShouldBe = new StringBuilder(PrefixMessages.LOUD)
+				.append(' ').append(messageContent);
+		assertEquals("This should be equal", whatIfShouldBe.toString(), message
+				.getMessage().toString());
 	}
 
 	@Test
-	public void checkNullMessage(){
+	public void checkNullMessage() {
 		Loud message = new Loud();
 		message.setMessageValue(null);
-		assertEquals("This should be equal","[LOUD] null", message.getMessage().toString());
+		StringBuilder whatIfShouldBe = new StringBuilder(PrefixMessages.LOUD)
+		.append(' ').append((String)null);
+		
+		assertEquals("This should be equal", whatIfShouldBe.toString(), message
+				.getMessage().toString());
 	}
-	
+
 }
-
-
