@@ -11,17 +11,20 @@ public class TestQuite {
 		Quite message = new Quite();
 		StringBuilder messageContent = new StringBuilder("message");
 		message.setMessageValue(messageContent);
-		assertEquals("This should be equal", ("[QUITE] " + messageContent),
+		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.QUITE)
+				.append(' ').append(messageContent);
+		assertEquals("This should be equal", expectedMessage.toString(),
 				message.getMessage().toString());
 	}
 
 	@Test
-	public void checkNullMessage(){
+	public void checkNullMessage() {
 		Quite message = new Quite();
+		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.QUITE)
+				.append(' ').append((String) null);
 		message.setMessageValue(null);
-		assertEquals("This should be equal","[QUITE] null", message.getMessage().toString());
+		assertEquals("This should be equal", expectedMessage.toString(),
+				message.getMessage().toString());
 	}
-	
+
 }
-
-
