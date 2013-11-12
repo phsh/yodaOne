@@ -13,8 +13,8 @@ public class TestLoud {
 		message.setMessageValue(messageContent);
 		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.LOUD)
 				.append(' ').append(messageContent);
-		assertEquals("This should be equal", expectedMessage.toString(), message
-				.getMessage().toString());
+		assertEquals("This should be equal", expectedMessage.toString(),
+				message.getMessage().toString());
 	}
 
 	@Test
@@ -22,10 +22,10 @@ public class TestLoud {
 		Loud message = new Loud();
 		message.setMessageValue(null);
 		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.LOUD)
-		.append(' ').append((String)null);
-		
-		assertEquals("This should be equal", expectedMessage.toString(), message
-				.getMessage().toString());
+				.append(' ').append((String) null);
+
+		assertEquals("This should be equal", expectedMessage.toString(),
+				message.getMessage().toString());
 	}
 
 }
