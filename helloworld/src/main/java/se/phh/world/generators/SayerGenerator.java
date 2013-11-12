@@ -3,7 +3,7 @@ package se.phh.world.generators;
 import java.util.List;
 
 import se.phh.factories.SayerFactory;
-import se.phh.pools.SayerList;
+import se.phh.lists.SayerList;
 import se.phh.sayers.Sayer;
 
 public class SayerGenerator implements Generator<Sayer> {

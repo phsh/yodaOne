@@ -1,4 +1,4 @@
-package se.phh.pools;
+package se.phh.lists;
 
 import java.util.ArrayList;
 import java.util.List;

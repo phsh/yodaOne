@@ -3,8 +3,8 @@ package se.phh.world.generators;
 import java.util.List;
 
 import se.phh.factories.MessageContentFactory;
+import se.phh.lists.MessageContentList;
 import se.phh.message.MessageContent;
-import se.phh.pools.MessageContentList;
 
 public class MessageContentGenerator implements Generator<MessageContent> {
 	private static MessageContentGenerator instance = null;
