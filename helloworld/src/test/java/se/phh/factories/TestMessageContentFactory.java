@@ -43,7 +43,7 @@ public class TestMessageContentFactory {
 	public void testGetMessageType_MESSAGE_TYPE_QUITE() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
 		MessageContent content = factory.getMessageType(
-				MessageContentFactory.MESSAGE_TYPE_QUITE, new StringBuilder(
+				MessageContentFactory.MESSAGE_TYPE_QUIET, new StringBuilder(
 						"messageValue"));
 		assertEquals("This should be equals", content.getMessage().toString(),
 				PrefixMessages.QUITE + " messageValue");

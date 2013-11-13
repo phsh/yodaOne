@@ -1,8 +1,8 @@
 package se.phh.message;
 
-public class Quite extends Message {
+public class Quiet extends Message {
 
-	public Quite() {
+	public Quiet() {
 		super();
 	}
 

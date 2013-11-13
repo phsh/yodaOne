@@ -32,7 +32,7 @@ public class MessageContentGenerator implements Generator<MessageContent> {
 		pool.add(factory.getMessageType(
 				MessageContentFactory.MESSAGE_TYPE_LOUD, MESSAGE));
 		pool.add(factory.getMessageType(
-				MessageContentFactory.MESSAGE_TYPE_QUITE, MESSAGE));
+				MessageContentFactory.MESSAGE_TYPE_QUIET, MESSAGE));
 	}
 
 	public List<MessageContent> get() {

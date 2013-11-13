@@ -4,11 +4,11 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class TestQuite {
+public class TestQuiet {
 
 	@Test
 	public void test() {
-		Quite message = new Quite();
+		Quiet message = new Quiet();
 		StringBuilder messageContent = new StringBuilder("message");
 		message.setMessageValue(messageContent);
 		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.QUITE)
@@ -19,7 +19,7 @@ public class TestQuite {
 
 	@Test
 	public void checkNullMessage() {
-		Quite message = new Quite();
+		Quiet message = new Quiet();
 		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.QUITE)
 				.append(' ').append((String) null);
 		message.setMessageValue(null);
