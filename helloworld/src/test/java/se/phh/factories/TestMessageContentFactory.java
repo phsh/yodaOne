@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import se.phh.message.MessageContent;
+import se.phh.message.PrefixMessages;
 
 public class TestMessageContentFactory {
 
@@ -35,7 +36,7 @@ public class TestMessageContentFactory {
 				MessageContentFactory.MESSAGE_TYPE_LOUD, new StringBuilder(
 						"messageValue"));
 		assertEquals("This should be equals", content.getMessage().toString(),
-				"[LOUD] messageValue");
+				PrefixMessages.LOUD + " messageValue");
 	}
 
 	@Test
@@ -45,7 +46,7 @@ public class TestMessageContentFactory {
 				MessageContentFactory.MESSAGE_TYPE_QUITE, new StringBuilder(
 						"messageValue"));
 		assertEquals("This should be equals", content.getMessage().toString(),
-				"[QUITE] messageValue");
+				PrefixMessages.QUITE + " messageValue");
 	}
 
 	@Test
@@ -57,5 +58,5 @@ public class TestMessageContentFactory {
 		assertEquals("This should be equals", content.getMessage().toString(),
 				"messageValue");
 	}
-	
+
 }
