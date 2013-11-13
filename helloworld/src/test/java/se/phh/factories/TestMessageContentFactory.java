@@ -57,4 +57,5 @@ public class TestMessageContentFactory {
 		assertEquals("This should be equals", content.getMessage().toString(),
 				"messageValue");
 	}
+	
 }
