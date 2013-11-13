@@ -29,4 +29,12 @@ public class TestMessageContentFactory {
 		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_LOUD, new StringBuilder("messageValue"));
 		assertEquals("This should be equals", content.getMessage().toString(),"[LOUD] messageValue");
 	}
+	
+	@Test
+	public void testGetMessageType_MESSAGE_TYPE_QUITE(){
+		MessageContentFactory factory = MessageContentFactory.getInstance();
+		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_QUITE, new StringBuilder("messageValue"));
+		assertEquals("This should be equals", content.getMessage().toString(),"[QUITE] messageValue");
+	}
+	
 }
