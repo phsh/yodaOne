@@ -7,40 +7,54 @@ import org.junit.Test;
 import se.phh.message.MessageContent;
 
 public class TestMessageContentFactory {
-	
+
 	@Test
-	public void testGetInstance(){
+	public void testGetInstance() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
-		MessageContentFactory factory_other = MessageContentFactory.getInstance();
-		assertEquals("This is a singleton, there can be only one", factory,factory_other);
-		
+		MessageContentFactory factory_other = MessageContentFactory
+				.getInstance();
+		assertEquals("This is a singleton, there can be only one", factory,
+				factory_other);
+
 	}
-	
+
 	@Test
-	public void testGetMessageType_MESSAGE_TYPE_DEFAULT(){
+	public void testGetMessageType_MESSAGE_TYPE_DEFAULT() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
-		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_DEFAULT, new StringBuilder("messageValue"));
-		assertEquals("This should be equals", content.getMessage().toString(),"[1] messageValue");
+		MessageContent content = factory.getMessageType(
+				MessageContentFactory.MESSAGE_TYPE_DEFAULT, new StringBuilder(
+						"messageValue"));
+		assertEquals("This should be equals", content.getMessage().toString(),
+				"[1] messageValue");
 	}
-	
+
 	@Test
-	public void testGetMessageType_MESSAGE_TYPE_LOUD(){
+	public void testGetMessageType_MESSAGE_TYPE_LOUD() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
-		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_LOUD, new StringBuilder("messageValue"));
-		assertEquals("This should be equals", content.getMessage().toString(),"[LOUD] messageValue");
+		MessageContent content = factory.getMessageType(
+				MessageContentFactory.MESSAGE_TYPE_LOUD, new StringBuilder(
+						"messageValue"));
+		assertEquals("This should be equals", content.getMessage().toString(),
+				"[LOUD] messageValue");
 	}
-	
+
 	@Test
-	public void testGetMessageType_MESSAGE_TYPE_QUITE(){
+	public void testGetMessageType_MESSAGE_TYPE_QUITE() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
-		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_QUITE, new StringBuilder("messageValue"));
-		assertEquals("This should be equals", content.getMessage().toString(),"[QUITE] messageValue");
+		MessageContent content = factory.getMessageType(
+				MessageContentFactory.MESSAGE_TYPE_QUITE, new StringBuilder(
+						"messageValue"));
+		assertEquals("This should be equals", content.getMessage().toString(),
+				"[QUITE] messageValue");
 	}
-	
+
 	@Test
-	public void testGetMessageType_MESSAGE_TYPE_STANDARD(){
+	public void testGetMessageType_MESSAGE_TYPE_STANDARD() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
-		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD, new StringBuilder("messageValue"));
-		assertEquals("This should be equals", content.getMessage().toString(),"messageValue");
+		MessageContent content = factory.getMessageType(
+				MessageContentFactory.MESSAGE_TYPE_STANDARD, new StringBuilder(
+						"messageValue"));
+		assertEquals("This should be equals", content.getMessage().toString(),
+				"messageValue");
 	}
 }
