@@ -37,4 +37,10 @@ public class TestMessageContentFactory {
 		assertEquals("This should be equals", content.getMessage().toString(),"[QUITE] messageValue");
 	}
 	
+	@Test
+	public void testGetMessageType_MESSAGE_TYPE_STANDARD(){
+		MessageContentFactory factory = MessageContentFactory.getInstance();
+		MessageContent content = factory.getMessageType(MessageContentFactory.MESSAGE_TYPE_STANDARD, new StringBuilder("messageValue"));
+		assertEquals("This should be equals", content.getMessage().toString(),"messageValue");
+	}
 }
