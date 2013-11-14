@@ -22,6 +22,7 @@ public class TestMessageContentList {
 		messageContentList.add(setMessage);
 		MessageContent getMessage = messageContentList.get().get(0);
 		assertEquals("The same message",setMessage,getMessage);
+		assertEquals("There ought to be only one",1,messageContentList.get().size());
 	}
-
+	
 }
