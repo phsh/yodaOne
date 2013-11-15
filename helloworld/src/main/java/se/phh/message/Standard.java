@@ -7,7 +7,7 @@ public class Standard extends Message {
 	}
 
 	public StringBuilder getMessage() {
-		return this.getMessageValue();
+		return new StringBuilder(this.getMessageValue());
 	}
 
 }

@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import se.phh.message.Standard;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 public class TestStandardMessage {
 
@@ -13,14 +12,14 @@ public class TestStandardMessage {
 		Standard message = new Standard();
 		StringBuilder messageContent = new StringBuilder("message");
 		message.setMessageValue(messageContent);
-		assertEquals("This should be equal", messageContent,
-				message.getMessage());
+		assertEquals("This should be equal", messageContent.toString(),
+				message.getMessage().toString());
 	}
 	
-	@Test
+	@Test (expected=NullPointerException.class )
 	public void checkNullMessage(){
 		Standard message = new Standard();
 		message.setMessageValue(null);
-		assertNull("This should be null", message.getMessage());
+		message.getMessage();
 	}
 }
