@@ -46,9 +46,9 @@ public class TestMessageContentList {
 		MessageContent getMessage2 = messageContentList.get().get(1);
 		MessageContent getMessage3 = messageContentList.get().get(2);
 
-		assertEquals("The same message, 1", setMessage1, getMessage1);
-		assertEquals("The same message, 2", setMessage2, getMessage2);
-		assertEquals("The same message, 3", setMessage3, getMessage3);
+		assertEquals("The same message nr 1", setMessage1, getMessage1);
+		assertEquals("The same message nr 2", setMessage2, getMessage2);
+		assertEquals("The same message nr 3", setMessage3, getMessage3);
 
 		assertEquals("There ought to be only three", 3, messageContentList
 				.get().size());

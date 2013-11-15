@@ -1,17 +1,20 @@
 package se.phh.message;
 
-import org.junit.Test;
-
-import se.phh.message.Standard;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
+
+import org.junit.Test;
 
 public class TestStandardMessage {
 
 	@Test
-	public void checkMessage() {
+	public void verifyTheValueOfTheMessageContent() {
 		Standard message = new Standard();
 		StringBuilder messageContent = new StringBuilder("message");
 		message.setMessageValue(messageContent);
+		
+		assertNotSame("These Messages are not the same", messageContent, message.getMessage());
+		
 		assertEquals("This should be equal", messageContent.toString(),
 				message.getMessage().toString());
 	}
