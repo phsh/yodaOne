@@ -30,7 +30,7 @@ public class TestLoud {
 	}
 
 	@Test
-	public void checkImutabity() {
+	public void checkNewStringBuilderForEachCall() {
 		StringBuilder setMessage = new StringBuilder("Some text");
 		Loud message = new Loud();
 		message.setMessageValue(setMessage);
