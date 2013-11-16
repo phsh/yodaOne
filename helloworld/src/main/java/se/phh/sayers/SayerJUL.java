@@ -7,6 +7,17 @@ import java.util.logging.Logger;
 public class SayerJUL implements Sayer {
 	private static Logger logger = Logger.getLogger(SayerJUL.class.getName());
 
+	private static SayerJUL instance = null;
+
+	private SayerJUL() {
+	}
+
+	public static SayerJUL getInstance() {
+		if (instance == null)
+			instance = new SayerJUL();
+		return instance;
+	}
+
 	public void say(MessageContent message) {
 		logger.fine(message.getMessage().toString());
 		logger.finer(message.getMessage().toString());

@@ -29,11 +29,11 @@ public class SayerFactory {
 	public Sayer getSayer(String typeOfSayer) {
 		Sayer returner = null;
 		if (typeOfSayer.equals(SAYER_OUT)) {
-			returner = new SayerSystemOut();
+			returner = SayerSystemOut.getInstance();
 		} else if (typeOfSayer.equals(SAYER_ERR)) {
-			returner = new SayerSystemErr();
+			returner = SayerSystemErr.getInstance();
 		} else if (typeOfSayer.equals(SAYER_JUL)) {
-			returner = new SayerJUL();
+			returner = SayerJUL.getInstance();
 		} else {
 			returner = getSayer(SAYER_OUT);
 		}
