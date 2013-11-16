@@ -1,6 +1,7 @@
 package se.phh.message;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotSame;
 
 import org.junit.Test;
 
@@ -13,8 +14,10 @@ public class TestQuiet {
 		message.setMessageValue(messageContent);
 		StringBuilder expectedMessage = new StringBuilder(PrefixMessages.QUITE)
 				.append(' ').append(messageContent);
-		assertEquals("This should be equal", expectedMessage.toString(),
+		assertEquals("These values should be equal", expectedMessage.toString(),
 				message.getMessage().toString());
+		
+		assertNotSame("Not the same object", expectedMessage, message.getMessage());
 	}
 
 	@Test
