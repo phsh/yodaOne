@@ -14,8 +14,7 @@ public class SayerSystemErr implements Sayer {
 			instance = new SayerSystemErr();
 		return instance;
 	}
-	
-	
+
 	public void say(MessageContent message) {
 		System.err.println(message.getMessage());
 	}
