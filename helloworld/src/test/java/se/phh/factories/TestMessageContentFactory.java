@@ -11,7 +11,7 @@ import se.phh.message.PrefixMessages;
 public class TestMessageContentFactory {
 
 	@Test
-	public void testGetInstance() {
+	public void testOfSingleton() {
 		MessageContentFactory factory = MessageContentFactory.getInstance();
 		MessageContentFactory factory_other = MessageContentFactory
 				.getInstance();
