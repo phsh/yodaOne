@@ -14,9 +14,9 @@ public class MessageContentListTest {
 
 	@Test
 	public void testConstructor() {
-		MessageContentList list = new MessageContentList();
-		assertNotNull("You should be able to create lists", list);
-		assertEquals("There should be zero elements", 0, list.get().size());
+		MessageContentList messageContentList = new MessageContentList();
+		assertNotNull("You should be able to create lists", messageContentList);
+		assertEquals("There should be zero elements", 0, messageContentList.get().size());
 	}
 
 	@Test
