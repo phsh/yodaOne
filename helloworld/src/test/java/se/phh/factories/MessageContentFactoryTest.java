@@ -8,7 +8,7 @@ import org.junit.Test;
 import se.phh.message.MessageContent;
 import se.phh.message.PrefixMessages;
 
-public class TestMessageContentFactory {
+public class MessageContentFactoryTest {
 
 	@Test
 	public void testOfSingleton() {

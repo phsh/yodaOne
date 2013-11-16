@@ -10,7 +10,7 @@ import se.phh.message.MessageContent;
 import se.phh.message.Quiet;
 import se.phh.message.Standard;
 
-public class TestMessageContentList {
+public class MessageContentListTest {
 
 	@Test
 	public void testConstructor() {

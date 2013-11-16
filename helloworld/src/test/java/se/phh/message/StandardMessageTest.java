@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotSame;
 
 import org.junit.Test;
 
-public class TestStandardMessage {
+public class StandardMessageTest {
 
 	@Test
 	public void verifyTheValueOfTheMessageContent() {

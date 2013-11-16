@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotSame;
 
 import org.junit.Test;
 
-public class TestLoud {
+public class LoudTest {
 
 	@Test
 	public void test() {

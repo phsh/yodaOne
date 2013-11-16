@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-public class TestSayerFactory {
+public class SayerFactoryTest {
 
 	@Test
 	public void testOfSingleton(){
