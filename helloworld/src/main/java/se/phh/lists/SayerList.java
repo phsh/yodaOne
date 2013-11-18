@@ -7,16 +7,16 @@ import se.phh.sayers.Sayer;
 
 public class SayerList {
 
-	private List<Sayer> listOfSayers = new ArrayList<Sayer>();
+	private List<Sayer> sayerList = new ArrayList<Sayer>();
 
 	public SayerList() {
 	}
 
-	public void add(Sayer s) {
-		listOfSayers.add(s);
+	public void add(Sayer sayer) {
+		sayerList.add(sayer);
 	}
 
 	public List<Sayer> get() {
-		return listOfSayers;
+		return sayerList;
 	}
 }
