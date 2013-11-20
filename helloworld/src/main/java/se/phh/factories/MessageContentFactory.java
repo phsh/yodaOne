@@ -22,7 +22,6 @@ public class MessageContentFactory {
 		return instance;
 	}
 
-
 	public MessageContent getMessageType(int messageType,
 			StringBuilder messageValue) {
 		StringBuilder setMessageValue = messageValue;
