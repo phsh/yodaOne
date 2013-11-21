@@ -25,14 +25,14 @@ public class MessageContentFactory {
 	public MessageContent getMessageType(int messageType,
 			StringBuilder messageValue) {
 		StringBuilder setMessageValue = messageValue;
-		MessageContent returner = getMessageContent(messageType);
-		if (returner == null) {
-			returner = new Standard();
+		MessageContent messageContent = getMessageContent(messageType);
+		if (messageContent == null) {
+			messageContent = new Standard();
 			setMessageValue = new StringBuilder("[").append(messageType)
 					.append("] ").append(messageValue);
 		}
-		returner.setMessageValue(setMessageValue);
-		return returner;
+		messageContent.setMessageValue(setMessageValue);
+		return messageContent;
 	}
 
 	private MessageContent getMessageContent(int messageType) {
