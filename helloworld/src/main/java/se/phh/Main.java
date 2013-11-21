@@ -11,12 +11,12 @@ public class Main {
 	private static World WORLD = World.getInstance();
 
 	public static void main(String... args) {
-		for (MessageContent mc : messageGenerator.get()) {
-			sayWhat(mc);
+		for (MessageContent messageContent : messageGenerator.get()) {
+			say(messageContent);
 		}
 	}
 
-	private static void sayWhat(MessageContent messageContent) {
+	private static void say(MessageContent messageContent) {
 		WORLD.say(messageContent);
 	}
 }
