@@ -18,14 +18,14 @@ public class SayerJUL implements Sayer {
 		return instance;
 	}
 
-	public void say(MessageContent message) {
-		logger.fine(message.getMessage().toString());
-		logger.finer(message.getMessage().toString());
-		logger.finest(message.getMessage().toString());
-		logger.info(message.getMessage().toString());
-		logger.config(message.getMessage().toString());
-		logger.warning(message.getMessage().toString());
-		logger.severe(message.getMessage().toString());
+	public void say(MessageContent messageContent) {
+		logger.fine(messageContent.getMessage().toString());
+		logger.finer(messageContent.getMessage().toString());
+		logger.finest(messageContent.getMessage().toString());
+		logger.info(messageContent.getMessage().toString());
+		logger.config(messageContent.getMessage().toString());
+		logger.warning(messageContent.getMessage().toString());
+		logger.severe(messageContent.getMessage().toString());
 	}
 
 }

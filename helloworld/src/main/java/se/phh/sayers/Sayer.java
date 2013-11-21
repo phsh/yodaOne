@@ -4,6 +4,6 @@ import se.phh.message.MessageContent;
 
 public interface Sayer {
 
-	void say(MessageContent mc);
+	void say(MessageContent messageContent);
 
 }
