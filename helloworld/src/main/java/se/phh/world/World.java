@@ -21,8 +21,8 @@ public class World {
 	}
 	
 	public void say(MessageContent messageContent){
-		for(Sayer s : SayerGenerator.getInstance().get()){
-			s.say(messageContent);
+		for(Sayer sayer : SayerGenerator.getInstance().get()){
+			sayer.say(messageContent);
 		}
 	}
 }
